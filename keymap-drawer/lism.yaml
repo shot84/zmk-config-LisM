@@ -230,7 +230,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$mdi:arrow-up-bold$$
+  - Gui+R
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$mdi:progress-download$$
@@ -239,9 +239,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Gui+Alt+$$mdi:arrow-up-bold$$
-  - $$mdi:arrow-down-bold$$
-  - Gui+Alt+$$mdi:arrow-down-bold$$
+  - Sft+Ctl+$$mdi:keyboard-tab$$
+  - $$mdi:mouse-scroll-wheel$$
+  - Ctl+$$mdi:keyboard-tab$$
   - HOME
   - PG DN
   - END
