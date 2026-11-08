@@ -9,6 +9,7 @@
 //   ・右はトラックボール（PAW3222）＝右スティックの位置（38・45〜47）は物理的に無い。元の右 5way の割り当てを
 //     置いてあるが効かない（4waystick 版にしたとき用）
 //   ・エンコーダ無し＝sensor-bindings は書かない
+//   ・BT レイヤの左スティック＝元の Scr レイヤの右 5way（↑⌘R ←⌃⇧Tab ↓MB3 →⌃Tab・2026-11-09）
 // トラックボールのスクロールは SCROLL レイヤ（3）で効く＝snippets/trackball-*/ の scroller の layers と揃える
 
 #include <behaviors.dtsi>
@@ -125,8 +126,8 @@
 &bt BT_SEL 0  &trans       &trans                &kp LG(LA(MINUS))  &kp LG(LA(LS(EQUAL)))                        &bt BT_CLR_ALL  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4
 &bt BT_CLR    &trans       &trans                &kp LS(F11)        &kp LA(LS(S))                                &trans          &trans        &trans          &trans        &trans
 &sys_reset    &bootloader  &studio_unlock        &trans             &trans                                       &trans          &trans        &studio_unlock  &bootloader   &sys_reset
-&trans        &trans       &trans                &kp UP             &trans                 &trans  &bootloader   &trans          &kp PG_UP     &trans          &trans        &trans
-                           &kp LG(LA(UP_ARROW))  &kp DOWN           &kp LG(LA(DOWN))                             &kp HOME        &kp PG_DN     &kp END
+&trans        &trans       &trans                &kp LG(R)          &trans                 &trans  &bootloader   &trans          &kp PG_UP     &trans          &trans        &trans
+                           &kp LS(LC(TAB))       &mkp MB3           &kp LC(TAB)                                  &kp HOME        &kp PG_DN     &kp END
             >;
         };
 
