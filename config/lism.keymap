@@ -9,6 +9,7 @@
 //   ・右はトラックボール（PAW3222）＝右スティックの位置（38・45〜47）は物理的に無い。元の右 5way の割り当てを
 //     置いてあるが効かない（4waystick 版にしたとき用）
 //   ・エンコーダ無し＝sensor-bindings は書かない
+//   ・左スティックは全レイヤ ↑←↓→（2026-11-09）
 // トラックボールのスクロールは SCROLL レイヤ（3）で効く＝snippets/trackball-*/ の scroller の layers と揃える
 
 #include <behaviors.dtsi>
@@ -103,8 +104,8 @@
 &kp TAB           &kp N7        &kp N8        &kp N9        &kp MINUS                                   &kp LC(LEFT)           &kp LC(RIGHT)  &kp LC(UP_ARROW)  &kp LC(DOWN)  &kp LC(LS(LG(Z)))
 &kp NUMBER_0      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp COLON                                   &kp LG(RIGHT_BRACKET)  &kp AT_SIGN    &kp UP_ARROW      &kp EQUAL     &trans
 &mt LSHIFT SLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH                               &kp LG(LEFT_BRACKET)   &kp LEFT       &kp DOWN          &kp RIGHT     &trans
-&kp LCTRL         &kp LEFT_ALT  &kp LGUI      &kp LC(UP)    &kp LC(LG(R))  &kp LC(LS(S))  &kp ENTER     &kp ENTER              &kp PG_UP      &trans            &trans        &trans
-                                &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)                               &kp HOME               &kp PG_DN      &kp END
+&kp LCTRL         &kp LEFT_ALT  &kp LGUI      &kp UP        &kp LC(LG(R))  &kp LC(LS(S))  &kp ENTER     &kp ENTER              &kp PG_UP      &trans            &trans        &trans
+                                &kp LEFT      &kp DOWN      &kp RIGHT                                   &kp HOME               &kp PG_DN      &kp END
             >;
         };
 
@@ -126,7 +127,7 @@
 &bt BT_CLR    &trans       &trans                &kp LS(F11)        &kp LA(LS(S))                                &trans          &trans        &trans          &trans        &trans
 &sys_reset    &bootloader  &studio_unlock        &trans             &trans                                       &trans          &trans        &studio_unlock  &bootloader   &sys_reset
 &trans        &trans       &trans                &kp UP             &trans                 &trans  &bootloader   &trans          &kp PG_UP     &trans          &trans        &trans
-                           &kp LG(LA(UP_ARROW))  &kp DOWN           &kp LG(LA(DOWN))                             &kp HOME        &kp PG_DN     &kp END
+                           &kp LEFT              &kp DOWN           &kp RIGHT                                    &kp HOME        &kp PG_DN     &kp END
             >;
         };
 
