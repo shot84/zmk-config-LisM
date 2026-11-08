@@ -26,7 +26,8 @@
     status = "okay";
     device = <&trackball_central>;
     input-processors = 
-        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+        <&zip_xy_scaler 3 2>;   // ポインタ ×1.5（センサの CPI は既定のまま）
 
     scroller {
         layers = <3>;   // keymap の SCROLL レイヤ
